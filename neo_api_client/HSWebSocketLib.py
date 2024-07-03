@@ -1145,6 +1145,20 @@ class StartServer:
         if outData:
             self.onmessage(outData)
 
+    def fetch_data(self, ws, inData):
+        # print("[OnMessage]: Function is running in HSWebsocket")
+        outData = None
+        if isinstance(inData, bytes):
+            jsonData = self.hsWrapper.parseData(inData)
+            # print("JSON DATA in HSWEBSOCKE ON MESSAGE", jsonData)
+            if jsonData:
+                outData = json.dumps(jsonData) if isEncyptOut else jsonData
+        else:
+            outData = inData if not isEncyptIn else json.loads(inData) if isEncyptOut else inData
+        if outData:
+            self.onmessage(outData)
+            return outdata
+
     def on_close(self, ws, close_status_code, close_msg):
         # print("[OnClose]: Function is running HSWebsocket", close_status_code)
         if(self.on_close):
