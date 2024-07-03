@@ -1145,7 +1145,7 @@ class StartServer:
         if outData:
             self.onmessage(outData)
 
-     def fetch_data(self, ws, inData):
+    def fetch_data(self, ws, inData):
         # print("[OnMessage]: Function is running in HSWebsocket")
         outData = None
         if isinstance(inData, bytes):
