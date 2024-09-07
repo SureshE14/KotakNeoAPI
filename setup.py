@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 NAME = "neo-api-client"
-VERSION = "1.2.0"
+VERSION = "1.21.2"
 # To install the library, run the following
 #
 # python setup.py install
