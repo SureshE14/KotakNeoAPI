@@ -18,7 +18,7 @@ pip install "git+https://github.com/SureshE14/KotakNeoAPI"
 
 If you are updating your package please use below command to install
 ```sh
-pip install --force-reinstall "git+https://github.com/Kotak-Neo/kotak-neo-api"
+pip install --force-reinstall "git+https://github.com/SureshE14/KotakNeoAPI"
 ```
 (you may need to run `pip` with root permission: `sudo pip install -e "`)
 
